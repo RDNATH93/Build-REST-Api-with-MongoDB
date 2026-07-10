@@ -5,11 +5,15 @@ permissions:
    contents: read
    issues: write
    copilot-requests: write 
+env:
+  COPILOT_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Authorizes the Copilot AI Engine
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}             # Authorizes the 'gh' CLI tool to create the issue
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
+  
 jobs: 
   agent-task: 
     runs-on: ubuntu-latest
-    env:
-     COPILOT_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ 
     steps:
       - name: Branch Checkout
         uses: actions/checkout@v4
