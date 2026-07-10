@@ -25,7 +25,7 @@ jobs:
       - name: Agent Task - Review for vulnerabilities
         run: |
           npx @github/copilot \
-          -p "Review code and dependencies for vulnerabilities and create issue" \ 
+          -p "Review code and dependencies for vulnerabilities and create issue" \
           --no-ask-user \
           --allow-tool shell \
           --allow-url api.github.com
