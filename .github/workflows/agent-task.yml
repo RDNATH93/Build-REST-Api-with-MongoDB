@@ -14,14 +14,6 @@ jobs:
       - name: Branch Checkout
         uses: actions/checkout@v4
       
-      - name: Setup GitHub Copilot CLI
-        run: |
-          npm install -g @github/copilot
-          
-      - name: Agent Task - Summarize recent changes
-        run: |
-           copilot -p "Summarize recent changes in this repository" --no-ask-user
-      
       - name: Agent Task - Review for vulnerabilities
         run: |
           npx @github/copilot \
